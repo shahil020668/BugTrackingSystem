@@ -1,0 +1,162 @@
+/* General body styling */
+body {
+    background-image: url('/images/bug.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+.header {
+    height: 150px;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 2px solid #9756D4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(150, 56, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    h1{
+        font-size: 45px;
+            color: #00bfff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+    a {
+        text-decoration: none;
+    }
+    
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    margin-top: 25px;
+    left: 20px;
+    top: 20px;
+    animation: pulse 2s infinite;
+    border-radius: 10px;
+    padding: 10px;
+    filter: invert(1) brightness(2);
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Navigation styling */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #4CAF50, #1CBFFF);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Main container styling */
+.container {
+    margin: 50px auto;
+    max-width: 800px;
+    color: white;
+    padding: 20px 30px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 2px solid #5a5a5a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #5a5a5a;
+    font-size: 16px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    transition: box-shadow 0.3s;
+}
+
+textarea:focus {
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+button {
+    background: linear-gradient(45deg, #4CAF50, #1CBFFF);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Titles styling */
+h2, h3 {
+    color: #1CBFFF;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Comments Section */
+#commentSection p {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#commentSection p strong {
+    color: #4CAF50;
+}
+
+/* Optional: Additional interactive styles */
+textarea:hover {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+nav a:active {
+    transform: scale(0.98);
+}

@@ -1,0 +1,68 @@
+<!-- ejs file (bug details) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Tracking System - Bug Details</title>
+    <link rel="stylesheet" href="/stylesheet/bugDetail.css">
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="/">
+                <img src="/images/logo.png" id="logo" alt="Logo">
+            </a>
+            <a href="/"><h1 class="text-5xl font-extrabold text-center text-blue-600">Bug Tracking System</h1></a>
+            <nav>
+                <a href="/">Dashboard</a>
+                <a href="/logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Bug Details</h2>
+            <div class="bug-details">
+                <h3>Title: <%= bug.Title %></h3>
+                <p><strong>Description:</strong> <%= bug.Description %></p>
+                <p><strong>Status:</strong> <%= bug.Status %></p>
+                <p><strong>Severity:</strong> <%= bug.Severity %></p>
+                <p><strong>Assigned Developer:</strong> <%= bug.D_Name %></p>
+
+                <!-- Comments Section -->
+                <h3>Comments</h3>
+                <div id="commentSection">
+                    <% comment.forEach(function(comment) { %>
+                        <p><strong><%= comment.D_Name %>:</strong> <%= comment.CommentText %></p>
+                    <% }); %>
+                </div>
+
+                <!-- Add Comment Form -->
+                <form id="commentForm" action="/add_comment" method="POST">
+                    <input type="hidden" name="bug_id" value="<%= bug.BugID %>">
+                    <input type="hidden" name="developer_name" value="<%= bug.D_Name %>"> <!-- Assuming bug.Name contains the developer's name -->
+                    <textarea name="comment" rows="3" placeholder="Add a comment..." required></textarea>
+                    <button type="submit">Submit Comment</button>
+                </form>                
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+    
+        if (message) {
+            alert(message); // Display the alert
+            // Optionally, remove the query parameter from the URL
+            history.replaceState(null, '', window.location.pathname);
+        }
+    </script>
+    
+    
+</body>
+</html>
