@@ -1,0 +1,167 @@
+/* General body styling */
+body {
+    background-image: url('/images/bug.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the message box */
+.message {
+    margin: 20px 0;
+    padding: 15px;
+    border: 2px solid #FF4C4C;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 0, 0, 0.3);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.message p {
+    margin: 0;
+}
+
+
+/* Header styling */
+.header {
+    width: 100%; /* Full width */
+    height: 120px; /* Adjusted height */
+    padding: 10px 20px; /* Adjusted padding */
+    margin: 0 auto;
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Push content to the sides */
+    font-size: 22px;
+    color: white;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 2px solid #9756D4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(150, 56, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+
+.logo img {
+    width: 100px; /* Set to consistent size */
+    height: auto;
+    position: absolute;
+    left: 20px;
+    top: 20px; /* Aligns with the other pages */
+    animation: pulse 2s infinite;
+    border-radius: 10px;
+    filter: invert(1) brightness(2);
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Navigation styling */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #4CAF50, #1CBFFF);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Main container styling */
+.container {
+    margin: 50px auto;
+    max-width: 800px;
+    color: white;
+    padding: 30px 40px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 2px solid #5a5a5a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #5a5a5a;
+    font-size: 16px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    transition: box-shadow 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+button {
+    background: linear-gradient(45deg, #4CAF50, #1CBFFF);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Titles styling */
+h1 {
+    color: #1CBFFF;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Optional: Additional interactive styles */
+input:hover {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+button:active {
+    transform: scale(0.98);
+}

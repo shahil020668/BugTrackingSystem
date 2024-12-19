@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Tracking System</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <img src="/images/logo.png" alt="Logo">
+            </a>
+        </div>
+        <a href="/"><h1 class="text-5xl font-extrabold text-center text-blue-600">Bug Tracking System</h1></a>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/bugReport">Report a Bug</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="container">
+            <h1>About Us</h1>
+            <p>Welcome to <a href="/"><strong class="st">Bug Tracking System</strong></a>, the ultimate bug tracking and issue management platform designed to help teams streamline their development processes. Whether you’re working on small projects or large-scale systems, our tool ensures bugs are tracked, prioritized, and resolved efficiently.</p>
+        
+            <h2>Our Mission</h2>
+            <p>Our mission is to simplify bug reporting and resolution for development teams. We believe that well-organized issue management is key to delivering high-quality software and enhancing user experience.</p>
+        </div>
+
+        <div id="container">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Simple bug reporting:</strong> Easily submit bugs with detailed information.</li>
+                <li><strong>Task prioritization:</strong> Assign priority levels to issues based on severity.</li>
+                <li><strong>Seamless integrations:</strong> Connect with tools like GitHub, Slack, and more.</li>
+                <li><strong>Real-time collaboration:</strong> Collaborate with your team in real-time with notifications and status updates.</li>
+                <li><strong>Detailed analytics:</strong> Monitor progress and generate insightful reports to help you improve your development cycle.</li>
+            </ul>
+        </div>
+        <div id="container">
+            <h2>Who Can Use It</h2>
+            <p>Our platform is designed for development teams of all sizes—from startups and open-source projects to large enterprise organizations. Whether you’re a developer, QA tester, or project manager, our intuitive interface will make your bug tracking process smoother and more efficient.</p>
+        
+        </div>
+        <div id="container">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>User-friendly interface:</strong> Designed with simplicity and productivity in mind.</li>
+                <li><strong>Customizable workflows:</strong> Tailor the platform to fit your team's unique workflow.</li>
+                <li><strong>Excellent support:</strong> Get assistance from our dedicated customer support team whenever needed.</li>
+            </ul>
+        </div>
+        <div id="container">
+            <h2>Get Started</h2>
+            <p>Ready to streamline your bug tracking process? <a class="text-blue-500 hover:text-blue-700" href="/signup">Sign up today</a> and start tracking and resolving issues faster than ever before! Explore our demo or <a class="text-blue-500 hover:text-blue-700" href="/contact">contact our team</a> for more information.</p>
+        </div>
+        
+        <div class="information">
+            <h2 class="text-5xl font-extrabold text-center text-blue-600">Assigned Bugs</h2>
+        <table id="bugTable">
+            <thead>
+                <tr>
+                    <th>Bug ID</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Severity</th>
+                    <th>Action</th>
+                </tr>
+            <tbody>
+                <% if (bugs && bugs.length > 0) { %>
+                    <% bugs.forEach(bugs => { %>
+                        <tr>
+                            <td><%= bugs.BugID %></td>
+                            <td><%= bugs.Title %></td>
+                            <td><%= bugs.Status %></td>
+                            <td><%= bugs.Severity %></td>
+                            <td><a href="/bugdetail/<%= bugs.BugID %>">View Details</a></td>
+                        </tr>
+                    <% }) %>
+                <% } else { %>
+                    <p>No Bug to display.</p>
+                <% } %>
+            </tbody>
+                
+            </thead>
+            <tbody>
+                <!-- Fetch and display bugs here dynamically from backend -->
+            </tbody>
+        </div>
+    </main>
+
+    <script src="/javascript/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
