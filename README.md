@@ -34,9 +34,3 @@ Before running this project, ensure you have the following installed on your sys
 * **Node.js**: v18.19.1 or higher.
 * **MySQL Server**: Running on the default port `3306`.
 * **npm**: Node package manager.
-
-## ⚙️ Local Setup
-
-1. **Navigate to the Project**:
-   ```bash
-   cd ~/U23CS120/WebD/BUG
