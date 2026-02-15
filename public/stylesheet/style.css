@@ -1,0 +1,256 @@
+body {
+    background-image: url('/images/bug.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Orbitron', sans-serif, 'Roboto', sans-serif;
+    color: white;
+}
+
+/* General styling for header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 2px solid #9756D4;
+    box-shadow: inset -5px -5px 10px rgba(79, 4, 170, 0.338);
+    margin-bottom: 20px;
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 32px;
+    color: #00bfff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #4CAF50, #1CBFFF);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Logo styling */
+.logo img {
+    height: 100px;
+    width: auto;
+    animation: blink 0.5s infinite;
+
+    filter: invert(1) brightness(2);
+}
+
+/* Animations */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    33% { color: orange; }
+    66% { color: green; }
+    100% { color: purple; }
+}
+
+.st {
+    animation: colorChange 3s infinite;
+    font-weight: bold;
+    /* text-decoration: underline; */
+    transition: color 0.5s ease-in-out;
+}
+
+/* Main container styling */
+#container {
+    margin-top: 20px;
+    width: 80vw; /* 80% of the viewport width */
+   /* max-width: 200px; /* Still limit the maximum to 800px */
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 2px solid #9756D4;
+    box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: transform 1.5s ease, opacity 1s ease;
+}
+
+#container {
+    width: 80%;
+}
+
+
+.container.scroll-down {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.container.scroll-up {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+h1, h2 {
+    color: #1CBFFF;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+p, ul {
+    line-height: 1.6;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #3cebdb;
+}
+
+p strong, ul li strong {
+    color: red;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Table styling */
+#bugTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#bugTable th, #bugTable td {
+    padding: 12px;
+    font-size: 18px;
+    text-align: left;
+    border: 1px solid #ddd;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#bugTable th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#bugTable tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#bugTable tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#bugTable .action-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#bugTable .action-btn:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s;
+}
+
+/* Buttons and links */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff5722;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.information {
+    padding: 15px;
+    max-width: 900px;
+    margin: 20px auto;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    h2{
+        font-size: 3rem; /* Adjust size */
+        font-weight: 800;
+        text-align: center;
+        color: blue; /* Fallback color */
+        animation: blink-colors 2s infinite;
+    }
+}
+
+@keyframes blink-colors {
+    0% {
+        color: blue;
+    }
+    20% {
+        color: red;
+    }
+    40% {
+        color: green;
+    }
+    60% {
+        color: orange;
+    }
+    80% {
+        color: purple;
+    }
+    100% {
+        color: blue;
+    }
+}
