@@ -26,11 +26,3 @@ A full-stack web application designed to report, track, and manage software bugs
 * **Database**: MySQL (via `mysql2/promise`).
 * **Frontend**: EJS (Embedded JavaScript templates).
 * **Security**: `bcrypt` for password hashing and JWT for protected routes.
-
-
-
-## 📋 Prerequisites
-Before running this project, ensure you have the following installed on your system (e.g., Kali Linux/Ubuntu):
-* **Node.js**: v18.19.1 or higher.
-* **MySQL Server**: Running on the default port `3306`.
-* **npm**: Node package manager.
